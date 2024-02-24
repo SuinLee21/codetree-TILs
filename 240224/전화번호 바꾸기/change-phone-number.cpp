@@ -11,6 +11,6 @@ int main() {
     middle = right;
     right = temp;
 
-    cout << left << x << middle << x << right;
+    cout << "0" << left << x << middle << x << right;
     return 0;
 }
