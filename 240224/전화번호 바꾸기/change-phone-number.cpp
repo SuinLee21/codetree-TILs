@@ -7,10 +7,6 @@ int main() {
 
     cin >> left >> x >> middle >> x >> right;
 
-    temp = middle;
-    middle = right;
-    right = temp;
-
-    cout << "0" << left << x << middle << x << right;
+    cout << "0" << left << x << right << x << middle;
     return 0;
 }
