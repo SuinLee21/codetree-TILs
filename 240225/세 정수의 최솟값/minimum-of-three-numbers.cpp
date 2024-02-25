@@ -2,12 +2,10 @@
 using namespace std;
 
 int main() {
-    int a, b, c, min = 0;
+    int a, b, c, min;
     cin >> a >> b >> c;
 
-    if(min >= a) {
-        min = a;
-    }
+    min = a;
     if(min >= b) {
         min = b;
     }
