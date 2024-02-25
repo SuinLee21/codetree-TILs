@@ -5,33 +5,33 @@ int main() {
     int a, b;
 
     if(a >= b) {
-        cout << 1;
+        cout << 1 << endl;
     }else {
-        cout << 0;
+        cout << 0 << endl;
     }
 
     if(a > b) {
-        cout << 1;
+        cout << 1 << endl;
     } else {
-        cout << 0;
+        cout << 0 << endl;
     }
 
     if (b >= a) {
-        cout << 1;
+        cout << 1 << endl;
     } else {
-        cout << 0;
+        cout << 0 << endl;
     }
 
     if (b > a) {
-        cout << 1;
+        cout << 1 << endl;
     } else {
-        cout << 0;
+        cout << 0 << endl;
     }
 
     if (a == b) {
-        cout << 1;
+        cout << 1 << endl;
     } else {
-        cout << 0;
+        cout << 0 << endl;
     }
 
     if (a != b) {
