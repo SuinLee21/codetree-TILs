@@ -2,13 +2,14 @@
 using namespace std;
 
 int main() {
-    int n, cnt = 1;
+    int n, temp, cnt = 0;
     cin >> n;
-
+    
+    temp = n;
     for (int i = 1; i <= n; i++) {
-        n /= i;
+        temp /= i;
         cnt++;
-        if (n == 0){
+        if (temp == 0){
             break;
         }
     }
