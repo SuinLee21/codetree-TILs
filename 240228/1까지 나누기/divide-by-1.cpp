@@ -9,7 +9,7 @@ int main() {
     for (int i = 1; i <= n; i++) {
         temp /= i;
         cnt++;
-        if (temp == 0){
+        if (temp <= 1){
             break;
         }
     }
