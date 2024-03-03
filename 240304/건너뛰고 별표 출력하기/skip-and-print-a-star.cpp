@@ -16,7 +16,7 @@ int main() {
         } else {
             count--;
         }
-        cout << endl;
+        cout << endl << endl;
     }
     return 0;
 }
