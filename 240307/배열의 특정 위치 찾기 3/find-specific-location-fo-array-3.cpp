@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     int arr[100] = {}, temp = 0;
 
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 100; i++) {
         cin >> arr[i];
         if (temp == 0 && arr[i] == 0) {
             temp = i;
