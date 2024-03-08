@@ -27,7 +27,7 @@ int main() {
     }
 
     if (is_duplicate) {
-        while(is_duplicate || min != max){
+        while(is_duplicate){
             int nextMax;
             bool is_initialized = false;
 
@@ -44,9 +44,14 @@ int main() {
                 }
                 if (arr[i] > nextMax) {
                     nextMax = arr[i];
+                } else {
+                    is_duplicate = false;
                 }
             }
             max = nextMax;
+            if (max == min) {
+                break;
+            }
         }
         if (min == max) {
             cout << -1;
