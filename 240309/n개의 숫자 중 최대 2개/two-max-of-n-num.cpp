@@ -19,7 +19,13 @@ int main() {
         }
     }
 
-    int secondMax = max - 1;
+    int secondMax;
+
+    if (idx == 0) {
+        secondMax = arr[1];
+    } else {
+        secondMax = arr[0];
+    }
 
     for (int i = 0; i < 10; i++) {
         if (i == idx) {
