@@ -9,57 +9,24 @@ int main() {
         cin >> arr[i];
     }
 
-    int max = arr[0];
-    int min = arr[0];
-    bool is_duplicate = false;
+    int max = -1;
 
-    for (int i = 1; i < n; i++) {
-        if (max == arr[i]) {
-            is_duplicate = true;
-        } else if (arr[i] > max) {
-            is_duplicate = false;
-            max = arr[i];
-        }
+    for (int i = 0; i < n; i++) {
+        int num = arr[i];
 
-        if (min > arr[i]) {
-            min = arr[i];
-        }
-    }
+        if (num > max) {
+            int count = 0;
 
-    if (is_duplicate) {
-        while(is_duplicate){
-            int nextMax;
-            bool is_initialized = false;
-
-            for (int i = 0; i < n; i++) {
-                if (arr[i] >= max) {
-                    is_duplicate = true;
-                    continue;
-                }
-                if (!is_initialized) {
-                    nextMax = arr[i];
-                    is_initialized = true;
-                    is_duplicate = false;
-                    continue;
-                }
-                if (arr[i] > nextMax) {
-                    nextMax = arr[i];
-                } else {
-                    is_duplicate = false;
+            for (int j = 0; j < n; j++) {
+                if (arr[j] == num) {
+                    count++;
                 }
             }
-            max = nextMax;
-            if (max == min) {
-                break;
+            if (count == 1) {
+                max = num;
             }
         }
-        if (min == max) {
-            cout << -1;
-        } else {
-            cout << max;
-        }
-    } else {
-        cout << max;
     }
+    cout << max;
     return 0;
 }
