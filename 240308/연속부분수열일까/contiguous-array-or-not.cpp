@@ -30,9 +30,13 @@ int main() {
                 break;
             }
         }
+        if (count == n2) {
+            is_sequence = true;
+            break;
+        }
     }
     
-    if (count == n2) {
+    if (is_sequence) {
         cout << "Yes";
     } else {
         cout << "No";
