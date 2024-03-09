@@ -36,11 +36,17 @@ int main() {
         if (forcasts[i].weather != "Rain") {
             continue;
         }
+        if (subYear > minYear) {
+            continue;
+        }
         if (subYear < minYear) {
             minYear = subYear;
             minMonth = subMonth;
             minDay = subDay;
             idx = i;
+            continue;
+        }
+        if (subYear == minYear && subMonth > minMonth) {
             continue;
         }
         if (subYear == minYear && subMonth < minMonth) {
