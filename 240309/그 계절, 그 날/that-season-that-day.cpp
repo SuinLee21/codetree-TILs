@@ -22,28 +22,30 @@ int GetLastDay(int y, int m) {
     return 31;
 }
 
-int GetMonth(int y, int m, int d) {
+bool IsExit(int y, int m, int d) {
     if (d > GetLastDay(y, m)) {
-        return -1;
+        return false;
     }
 
-    return m;
+    return true;
 }
 
 int main() {
     int y, m, d;
     cin >> y >> m >> d;
 
-    if (GetMonth(y, m, d) == -1) {
+    if (!IsExit(y, m, d)) {
         cout << -1;
+        return 0;
     }
-    else if (3 <= GetMonth(y, m, d) && GetMonth(y, m, d) <= 5) {
+    
+    if (3 <= m && m <= 5) {
         cout << "Spring";
     }
-    else if (6 <= GetMonth(y, m, d) && GetMonth(y, m, d) <= 8) {
+    else if (6 <= m && m <= 8) {
         cout << "Summer";
     }
-    else if (9 <= GetMonth(y, m, d) && GetMonth(y, m, d) <= 11) {
+    else if (9 <= m && m <= 11) {
         cout << "Fall";
     }
     else {
