@@ -16,9 +16,9 @@ int main() {
     cin >> a >> b;
 
     for (int i = a; i <= b; i++) {
-        if (i == 1) [
+        if (i == 1) {
             continue;
-        ]
+        }
         sum += SumPrime(i);
     }
     cout << sum;
