@@ -27,7 +27,7 @@ int main() {
     int maxIdx = 0;
 
     for (int i = 1; i < n; i++) {
-        if (peoples[maxIdx].name[0] < peoples[i].name[0]) {
+        if (peoples[maxIdx].name < peoples[i].name) {
             maxIdx = i;
         }
     }
