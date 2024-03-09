@@ -16,7 +16,7 @@ class Forcast{
 
 int main() {
     int n, idx;
-    int minYear = 2100, minMonth = 12, minDay = 31;
+    int minYear = 2101, minMonth = 13, minDay = 32;
     string date, week, weather;
     Forcast forcasts[100];
 
@@ -38,11 +38,14 @@ int main() {
         }
         if (subYear < minYear) {
             minYear = subYear;
+            minMonth = subMonth;
+            minDay = subDay;
             idx = i;
             continue;
         }
         if (subYear == minYear && subMonth < minMonth) {
             minMonth = subMonth;
+            minDay = subDay;
             idx = i;
             continue;
         }
