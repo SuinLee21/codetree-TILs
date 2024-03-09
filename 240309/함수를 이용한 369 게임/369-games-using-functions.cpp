@@ -7,7 +7,7 @@ bool ISInThree(int n) {
     while(n != 0) {
         n /= 10;
 
-        if (temp % 3 == 0) {
+        if (temp != 0 && temp % 3 == 0) {
             isThree = true;
             break;
         }
